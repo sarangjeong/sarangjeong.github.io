@@ -10,12 +10,6 @@ export default function HomePage() {
   const router = useRouter();
   const [isImageClicked, setIsImageClicked] = useState(false);
 
-  const tabs = [
-    // { name: 'Home', path: '/Home' },
-    // { name: 'Hobby', path: '/Hobby' },
-    // { name: 'Contact', path: '/Contact' },
-  ];
-
   const words = [
     "👋 Hi! I'm Sarang Jeong, a fifth-year Ph.D. student studying linguistics at Stanford."
   ];
@@ -29,17 +23,6 @@ export default function HomePage() {
       <header className="flex justify-between items-center w-full px-8 py-2 bg-black">
         <nav className="flex space-x-10 bg-black">
           <Image src="/logo.jpeg" alt="Logo" width={60} height={60} className="rounded-[20%]" />
-          {tabs.map((tab) => (
-            <motion.div
-              key={tab.name}
-              onClick={() => router.push(tab.path)}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="cursor-pointer px-2 py-1 rounded bg-gray-800 bg-opacity-50 text-gray-300"
-            >
-              {tab.name}
-            </motion.div>
-          ))}
         </nav>
       </header>
       <main className="flex-grow flex flex-col items-center justify-center text-gray-300">
